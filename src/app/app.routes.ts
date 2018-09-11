@@ -2,17 +2,16 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 import { HomeComponent } from './Home/home.component';
+import { RegisterComponent } from './Register/register.component';
+import { LoginComponent } from './Login/login.component';
 import { Error404Component } from './Error/Error404/error.404.component';
 import { Error500Component } from './Error/Error500/error.500.component';
 
 export const routes: Routes = [
-    {
-        path: '',
-        children: [
-            { path: '', redirectTo: 'home', pathMatch: 'full' },
-            { path: 'home', component: HomeComponent }
-        ]
-    },
+    { path: '', redirectTo: '/home', pathMatch: 'full' },
+    { path: 'home', component: HomeComponent },
+    { path: 'register', component: RegisterComponent },
+    { path: 'login', component: LoginComponent },
     {
         path: 'error',
         children: [
