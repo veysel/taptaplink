@@ -7,9 +7,11 @@ import { LoginComponent } from './Login/login.component';
 import { Error404Component } from './Error/Error404/error.404.component';
 import { Error500Component } from './Error/Error500/error.500.component';
 
+import { AuthCanActivate } from './Auth/auth.can.activate';
+
 export const routes: Routes = [
     { path: '', redirectTo: '/home', pathMatch: 'full' },
-    { path: 'home', component: HomeComponent },
+    { path: 'home', component: HomeComponent, canActivate: [AuthCanActivate] },
     { path: 'register', component: RegisterComponent },
     { path: 'login', component: LoginComponent },
     {

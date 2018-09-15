@@ -14,6 +14,7 @@ import { Error404Component } from './Error/Error404/error.404.component';
 import { Error500Component } from './Error/Error500/error.500.component';
 
 import { StorageService } from './Storage/Services/storage.service';
+import { AuthCanActivate } from './Auth/auth.can.activate';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { StorageService } from './Storage/Services/storage.service';
     RouterModule.forRoot(routes, {})
   ],
   providers: [
-    StorageService
+    StorageService,
+    AuthCanActivate
   ],
   bootstrap: [AppComponent]
 })
