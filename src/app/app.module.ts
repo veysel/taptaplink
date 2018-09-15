@@ -13,6 +13,8 @@ import { RegisterComponent } from './Register/register.component';
 import { Error404Component } from './Error/Error404/error.404.component';
 import { Error500Component } from './Error/Error500/error.500.component';
 
+import { StorageService } from './Storage/Services/storage.service';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,7 +30,9 @@ import { Error500Component } from './Error/Error500/error.500.component';
     HttpModule,
     RouterModule.forRoot(routes, {})
   ],
-  providers: [],
+  providers: [
+    StorageService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
