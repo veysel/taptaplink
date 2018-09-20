@@ -14,6 +14,9 @@ import { Error404Component } from './Error/Error404/error.404.component';
 import { Error500Component } from './Error/Error500/error.500.component';
 
 import { StorageService } from './Storage/Services/storage.service';
+import { CommonService } from './Common/Services/common.service';
+import { RegisterService } from './Register/Services/register.service';
+
 import { AuthCanActivate } from './Auth/auth.can.activate';
 
 @NgModule({
@@ -33,7 +36,9 @@ import { AuthCanActivate } from './Auth/auth.can.activate';
   ],
   providers: [
     StorageService,
-    AuthCanActivate
+    AuthCanActivate,
+    CommonService,
+    RegisterService
   ],
   bootstrap: [AppComponent]
 })
