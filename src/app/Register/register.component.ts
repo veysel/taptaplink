@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 
 import { RegisterService } from './Services/register.service';
+import { StorageService } from '../Storage/Services/storage.service';
 
 import { UserModel } from '../Common/Models/user.model';
 
@@ -23,8 +24,15 @@ export class RegisterComponent {
 
     constructor(
         private _registerService: RegisterService,
-        private _router: Router
-    ) { }
+        private _router: Router,
+        private _storageService: StorageService
+    ) {
+
+        if (this._storageService.CheckStorage()) {
+            this._router.navigate(["/home"]);
+        }
+
+    }
 
     public SaveButtonClick(): void {
         this.form.options.alert = "";

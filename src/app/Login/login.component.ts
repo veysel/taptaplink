@@ -25,7 +25,13 @@ export class LoginComponent {
         private _router: Router,
         private _loginService: LoginService,
         private _storageService: StorageService
-    ) { }
+    ) {
+
+        if (this._storageService.CheckStorage()) {
+            this._router.navigate(["/home"]);
+        }
+
+    }
 
     public LoginButtonClick(): void {
         this.form.options.alert = "";
@@ -38,7 +44,7 @@ export class LoginComponent {
         this._loginService.CheckLogin(this.form.username, this.form.password).subscribe(result => {
 
             if (result) {
-                
+
                 this._loginService.GetUserInfo(this.form.username, result).subscribe(resultUser => {
                     let tempUser: UserModel = resultUser;
 

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 import { HomeService } from './Services/home.service';
 import { StorageService } from '../Storage/Services/storage.service';
@@ -21,7 +22,8 @@ export class HomeComponent implements OnInit {
 
     constructor(
         private _homeService: HomeService,
-        private _storageService: StorageService
+        private _storageService: StorageService,
+        private _router: Router
     ) {
         this.form.postList = new Array<PostModel>();
     }
@@ -64,6 +66,11 @@ export class HomeComponent implements OnInit {
             this.GetPostList();
         });
 
+    }
+
+    public LogoutButtonClick() {
+        this._storageService.ClearStorage();
+        this._router.navigate(["/login"]);
     }
 
 }
