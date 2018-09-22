@@ -50,4 +50,20 @@ export class HomeComponent implements OnInit {
         }
     }
 
+    public PostButtonClick() {
+
+        this.form.options.alert = "";
+
+        if (!this.form.post) {
+            this.form.options.alert = "Lütfen boş bırakmayınız !";
+            return;
+        }
+
+        let tempStorage = this._storageService.GetStorage();
+        this._homeService.InsertNewPost(tempStorage.UserId, tempStorage.UserKey, this.form.post).subscribe(result => {
+            this.GetPostList();
+        });
+
+    }
+
 }

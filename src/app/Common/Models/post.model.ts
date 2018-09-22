@@ -1,7 +1,7 @@
 export class PostModel {
     PostId: number;
     PostContent: string;
-    UserId: string;
+    UserId: number;
     PostDate: string;
     State: boolean;
 }
