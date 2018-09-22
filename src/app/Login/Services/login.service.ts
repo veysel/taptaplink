@@ -19,6 +19,6 @@ export class LoginService {
     }
 
     public GetUserInfo(username: string, userKey: string) {
-        return this._http.get(this._commonService.GetServiceRootUrl() + "Login/GetUserInfo?username=" + username + "&userKey=" + userKey).map(x => x.json());
+        return this._http.get(this._commonService.GetServiceRootUrl() + "User/GetUserInfo?username=" + username + "&userKey=" + userKey).map(x => x.json());
     }
 }
