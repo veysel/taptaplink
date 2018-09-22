@@ -38,7 +38,7 @@ export class LoginComponent {
         this._loginService.CheckLogin(this.form.username, this.form.password).subscribe(result => {
 
             if (result) {
-                console.log(result);
+                
                 this._loginService.GetUserInfo(this.form.username, result).subscribe(resultUser => {
                     let tempUser: UserModel = resultUser;
 

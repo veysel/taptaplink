@@ -17,6 +17,7 @@ import { StorageService } from './Storage/Services/storage.service';
 import { CommonService } from './Common/Services/common.service';
 import { RegisterService } from './Register/Services/register.service';
 import { LoginService } from './Login/Services/login.service';
+import { HomeService } from './Home/Services/home.service';
 
 import { AuthCanActivate } from './Auth/auth.can.activate';
 
@@ -40,7 +41,8 @@ import { AuthCanActivate } from './Auth/auth.can.activate';
     AuthCanActivate,
     CommonService,
     RegisterService,
-    LoginService
+    LoginService,
+    HomeService
   ],
   bootstrap: [AppComponent]
 })
