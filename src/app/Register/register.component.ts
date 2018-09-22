@@ -72,4 +72,8 @@ export class RegisterComponent {
         });
 
     }
+
+    public LoginButtonClick() {
+        this._router.navigate(["/login"]);
+    }
 }
