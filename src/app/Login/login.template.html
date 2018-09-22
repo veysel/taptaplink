@@ -1,1 +1,16 @@
-Login
+<div class="d-flex justify-content-center mt-5">
+    <form style="width: 300px;">
+        <div *ngIf="form.options.alert" class="alert alert-secondary" role="alert">{{form.options.alert}}</div>
+        <div class="form-group">
+            <label for="username">Kullanıcı Adı</label>
+            <input [(ngModel)]="form.username" name="username" type="text" class="form-control" id="username"
+                placeholder="Kullanıcı Adı">
+        </div>
+        <div class="form-group">
+            <label for="password">Şifre</label>
+            <input [(ngModel)]="form.password" name="password" type="password" class="form-control" id="password"
+                placeholder="Şifre">
+        </div>
+        <button (click)="LoginButtonClick()" type="button" class="btn btn-success">Giriş Yap</button>
+    </form>
+</div>

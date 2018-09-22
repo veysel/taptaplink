@@ -1,6 +1,8 @@
 export class StorageModel {
-    Id: number;
+    UserKey: string;
+    UserId: number;
     Username: string;
     Name: string;
     Surname: string;
+    Password: string;
 }

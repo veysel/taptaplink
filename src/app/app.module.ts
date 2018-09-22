@@ -16,6 +16,7 @@ import { Error500Component } from './Error/Error500/error.500.component';
 import { StorageService } from './Storage/Services/storage.service';
 import { CommonService } from './Common/Services/common.service';
 import { RegisterService } from './Register/Services/register.service';
+import { LoginService } from './Login/Services/login.service';
 
 import { AuthCanActivate } from './Auth/auth.can.activate';
 
@@ -38,7 +39,8 @@ import { AuthCanActivate } from './Auth/auth.can.activate';
     StorageService,
     AuthCanActivate,
     CommonService,
-    RegisterService
+    RegisterService,
+    LoginService
   ],
   bootstrap: [AppComponent]
 })
