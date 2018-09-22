@@ -76,4 +76,8 @@ export class LoginComponent {
 
     }
 
+    public RegisterButtonClick(){
+        this._router.navigate(["/register"]);
+    }
+
 }
