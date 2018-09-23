@@ -74,4 +74,8 @@ export class HomeComponent implements OnInit {
         this._router.navigate(["/login"]);
     }
 
+    public HomeButtonClick(){
+        this._router.navigate(["/login"]);
+    }
+
 }
