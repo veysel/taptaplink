@@ -76,11 +76,11 @@ export class LoginComponent {
 
     }
 
-    public RegisterButtonClick(){
+    public RegisterButtonClick() {
         this._router.navigate(["/register"]);
     }
 
-    public HomeButtonClick(){
+    public HomeButtonClick() {
         this._router.navigate(["/home"]);
     }
 

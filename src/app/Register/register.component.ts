@@ -76,4 +76,8 @@ export class RegisterComponent {
     public LoginButtonClick() {
         this._router.navigate(["/login"]);
     }
+
+    public HomeButtonClick() {
+        this._router.navigate(["/home"]);
+    }
 }
