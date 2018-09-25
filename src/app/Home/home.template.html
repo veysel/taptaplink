@@ -1,22 +1,71 @@
+<!-- Main Element - Begin -->
 <div>
-    <div style="margin-bottom: 20px; padding: 3px; position: fixed; top: 0px; width: 100%; z-index: 2; background-color: #81b33a">
-        &nbsp;
-        <a (click)="HomeButtonClick()" style="margin-left: 30px; font-size: 14px; cursor: pointer; color: #3e3f3a;" class="float-left">Taptap Link</a>
-        <a (click)="LogoutButtonClick()" style="margin-right: 30px; font-size: 12px; cursor: pointer; color: white;" class="float-right">Çıkış Yap</a>
-    </div>
-</div>
-<div style="z-index: 1;" class="d-flex justify-content-center mt-5">
-    <form style="width: 500px;">
-        <div *ngIf="form.options.alert" class="alert alert-secondary" role="alert">{{form.options.alert}}</div>
-        <div class="form-group">
-            <input [(ngModel)]="form.post" name="post" type="text" class="form-control" id="post" placeholder="Birşeyler yazın...">
-        </div>
-        <button (click)="PostButtonClick()" type="button" class="btn btn-info">Paylaş</button>
-        <br><br><br><br>
-        <div>
-            <div style="margin-top: 25px;" *ngFor="let i of form.postList" class="list-group">
-                <a href="#" class="list-group-item list-group-item-action">{{i.PostContent}}</a>
+
+    <!-- Static Header Element - Begin -->
+    <div>
+        <div class="tap-header">
+            <div (click)="HomeButtonClick()" class="tap-logo">
+                Taptap Link
+            </div>
+            <div (click)="LogoutButtonClick()" class="tap-logout-btn">
+                Çıkış Yap
             </div>
         </div>
-    </form>
+    </div>
+    <!-- Static Header Element - End -->
+
+    <!-- Content Element - Begin -->
+    <div class="row">
+
+        <div class="col">&nbsp;</div>
+
+        <!-- Center Main Element - Begin -->
+        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-8 col-12">
+
+            <div class="row p-2">
+
+                <!-- Input Element - Begin -->
+                <div class="col-sm-9">
+                    <input [(ngModel)]="form.post" name="post" type="text" class="form-control tap-input" id="post"
+                        placeholder="Bir url yazın...">
+                </div>
+                <!-- Input Element - End -->
+
+                <!-- Share Button Element - Begin -->
+                <div class="col-sm-3">
+                    <button (click)="PostButtonClick()" type="button" class="btn btn-info tap-btn">Paylaş</button>
+                </div>
+                <!-- Share Button Elemet - End -->
+
+            </div>
+
+            <br><br><br>
+
+            <!-- Post Main Element - Begin -->
+            <div class="p-2">
+                <div *ngFor="let post of form.postList" class="tap-post">
+                    <div class="tap-user-block">
+                        <img class="tap-user-image" src="" alt="">
+                        <span class="tap-username">
+                            <a>{{post.UserId}}</a>
+                        </span>
+                        <span class="tap-time">{{post.PostDate | date: 'dd.MM.yyyy HH:mm:ss'}}</span>
+                    </div>
+                    <p class="tap-content-text">
+                        {{post.PostContent}}
+                    </p>
+                    <a href="#" class="tap-link"><i class="fa fa-share"></i> Linke Git</a>
+                </div>
+            </div>
+            <!-- Post Main Element - End -->
+
+        </div>
+        <!-- Center Main Element - End -->
+
+        <div class="col">&nbsp;</div>
+
+    </div>
+    <!-- Content Element - End -->
+
 </div>
+<!-- Main Element - End -->

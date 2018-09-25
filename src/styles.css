@@ -1,1 +1,135 @@
-/* You can add global styles to this file, and also import other style files */
+body{
+  font-family: 'Source Sans Pro','Helvetica Neue',Helvetica,Arial,sans-serif;
+  font-size: 14px;
+}
+
+.tap-input{
+  border-radius: 3px;
+  box-shadow: none;
+  border-color: #d2d6de;
+  padding: 5px 10px;
+  font-size: 12px;
+  height: 30px;
+  line-height: 1.5;
+  color: #555;
+  background-color: #fff;
+  display: block;
+  border: 1px solid #ccc;
+}
+
+.tap-btn{
+  border-radius: 3px;
+  box-shadow: none;
+  border: 1px solid transparent;
+  padding: 5px 10px;
+  font-size: 12px;
+  line-height: 1.5;
+  color: #fff;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+.tap-post{
+  border-bottom: 1px solid #d2d6de;
+  margin-bottom: 30px;
+  padding-bottom: 15px;
+  color: #666;
+}
+
+.tap-user-block{
+  margin-bottom: 15px;
+}
+
+.tap-user-image{
+  box-sizing: border-box;
+  vertical-align: middle;
+  border-radius: 50%;
+  border: 2px solid #d2d6de;
+  padding: 2px;
+  width: 30px;
+  height: 30px;
+  float: left;
+}
+
+.tap-username{
+  display: block;
+  margin-left: 50px;
+  font-size: 13px;
+  font-weight: 600;
+  box-sizing: border-box;
+  background-color: transparent;
+  text-decoration: none;
+  color: #3c8dbc;
+}
+
+.tap-time{
+  box-sizing: border-box;
+  display: block;
+  margin-left: 50px;
+  color: #999;
+  font-size: 11px;
+}
+
+.tap-content-text{
+  margin: 0 0 10px;
+}
+
+.tap-link{
+  list-style: none;
+  box-sizing: border-box;
+  background-color: transparent;
+  text-decoration: none;
+  color: #666;
+  font-size: 11px;
+  margin-right: 5px;
+  display: inline-block;
+}
+
+.tap-link:hover{
+  outline: none;
+  text-decoration: none;
+  color: #999;
+}
+
+.tap-header{
+  /* background-color: #3c8dbc; */
+  background-color: #81b33a;
+  min-height: 40px;
+  border-radius: 0;
+  margin-bottom: 20px;
+}
+
+.tap-logo{
+  background-color: #367fa9;
+  color: #fff;
+  border-bottom: 0 solid transparent;
+  transition: width .3s ease-in-out;
+  display: block;
+  float: left;
+  height: 40px;
+  font-size: 20px;
+  line-height: 40px;
+  text-align: center;
+  width: 230px;
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  padding: 0 15px;
+  font-weight: 300;
+  overflow: hidden;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.tap-logout-btn{
+  float: right;
+  position: relative;
+  color: #fff;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  line-height: 20px;
+  display: block;
+  padding: 10px 15px;
+  font-size: 12px;
+  text-decoration: none;
+  background-color: transparent;
+  cursor: pointer;
+}
