@@ -98,6 +98,10 @@ body{
   min-height: 40px;
   border-radius: 0;
   margin-bottom: 20px;
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  z-index: 2;
 }
 
 .tap-logo{
@@ -134,4 +138,8 @@ body{
   text-decoration: none;
   background-color: transparent;
   cursor: pointer;
+}
+
+.tap-body{
+  z-index: 1;
 }
