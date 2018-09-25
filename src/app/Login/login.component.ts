@@ -80,4 +80,8 @@ export class LoginComponent {
         this._router.navigate(["/register"]);
     }
 
+    public HomeButtonClick(){
+        this._router.navigate(["/home"]);
+    }
+
 }

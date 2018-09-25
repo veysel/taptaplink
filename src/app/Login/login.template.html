@@ -1,17 +1,41 @@
-<div class="d-flex justify-content-center mt-5">
-    <form style="width: 300px;">
-        <div *ngIf="form.options.alert" class="alert alert-secondary" role="alert">{{form.options.alert}}</div>
-        <div class="form-group">
-            <label for="username">Kullanıcı Adı</label>
-            <input [(ngModel)]="form.username" (keyup.enter)="LoginButtonClick()" name="username" type="text" class="form-control" id="username"
-                placeholder="Kullanıcı Adı">
+<!-- Main Element - Begin -->
+<div>
+
+    <!-- Static Header Element - Begin -->
+    <div class="tap-header">
+        <div (click)="HomeButtonClick()" class="tap-logo">
+            Taptap Link
         </div>
-        <div class="form-group">
-            <label for="password">Şifre</label>
-            <input [(ngModel)]="form.password" (keyup.enter)="LoginButtonClick()" name="password" type="password" class="form-control" id="password"
-                placeholder="Şifre">
+    </div>
+    <!-- Static Header Element - End -->
+
+    <!-- Content Element - Begin -->
+    <div class="row tap-body mt-5">
+
+        <div class="col">&nbsp;</div>
+
+        <!-- Center Main Element - Begin -->
+        <div class="col-xl-3 col-lg-4 col-md-4 col-sm-6 col-12 mt-5">
+
+            <div *ngIf="form.options.alert" class="alert alert-secondary" role="alert">{{form.options.alert}}</div>
+            <div class="form-group">
+                <input [(ngModel)]="form.username" (keyup.enter)="LoginButtonClick()" name="username" type="text" class="form-control tap-input"
+                    id="username" placeholder="Kullanıcı Adı">
+            </div>
+            <div class="form-group">
+                <input [(ngModel)]="form.password" (keyup.enter)="LoginButtonClick()" name="password" type="password"
+                    class="form-control tap-input" id="password" placeholder="Şifre">
+            </div>
+            <button (click)="LoginButtonClick()" type="button" class="btn btn-success tap-btn">Giriş Yap</button>
+            <a class="float-right tap-link" href="javascript:void" (click)="RegisterButtonClick()">Kayıt Ol</a>
+
         </div>
-        <button (click)="LoginButtonClick()" type="button" class="btn btn-success">Giriş Yap</button>
-        <a class="float-right" href="javascript:void" (click)="RegisterButtonClick()">Kayıt Ol</a>
-    </form>
+        <!-- Center Main Element - End -->
+
+        <div class="col">&nbsp;</div>
+
+    </div>
+    <!-- Content Element - End -->
+
 </div>
+<!-- Main Element - End -->
