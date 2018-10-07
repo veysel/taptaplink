@@ -4,4 +4,5 @@ export class PostModel {
     UserId: number;
     PostDate: string;
     State: boolean;
+    Username: string;
 }
