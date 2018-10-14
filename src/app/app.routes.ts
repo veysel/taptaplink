@@ -10,10 +10,10 @@ import { Error500Component } from './Error/Error500/error.500.component';
 import { AuthCanActivate } from './Auth/auth.can.activate';
 
 export const routes: Routes = [
-    { path: '', redirectTo: '/home', pathMatch: 'full' },
-    { path: 'home', component: HomeComponent, canActivate: [AuthCanActivate] },
-    { path: 'register', component: RegisterComponent },
-    { path: 'login', component: LoginComponent },
+    // { path: '', redirectTo: '/home', pathMatch: 'full' },
+    // { path: 'home', component: HomeComponent, canActivate: [AuthCanActivate] },
+    // { path: 'register', component: RegisterComponent },
+    // { path: 'login', component: LoginComponent },
     {
         path: 'error',
         children: [
