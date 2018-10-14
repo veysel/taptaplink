@@ -4,7 +4,7 @@ import { Injectable } from '@angular/core';
 export class CommonService {
 
     public GetServiceRootUrl(): string {
-        return "http://taptaplink.somee.com/api/";
+        return "";
     }
 
 }
